@@ -1,0 +1,40 @@
+{
+  "lessons": [
+    {
+      "slug": "intro-machine-learning",
+      "filename": "intro-machine-learning.json"
+    },
+    {
+      "slug": "neural-networks-deep-dive",
+      "filename": "neural-networks-deep-dive.json"
+    },
+    {
+      "slug": "nlp-basics",
+      "filename": "nlp-basics.json"
+    },
+    {
+      "slug": "ai-ethics-bias",
+      "filename": "ai-ethics-bias.json"
+    },
+    {
+      "slug": "privacy-data-protection",
+      "filename": "privacy-data-protection.json"
+    },
+    {
+      "slug": "ai-society-impacts",
+      "filename": "ai-society-impacts.json"
+    },
+    {
+      "slug": "building-ai-portfolio",
+      "filename": "building-ai-portfolio.json"
+    },
+    {
+      "slug": "ai-career-paths",
+      "filename": "ai-career-paths.json"
+    },
+    {
+      "slug": "networking-ai-community",
+      "filename": "networking-ai-community.json"
+    }
+  ]
+}

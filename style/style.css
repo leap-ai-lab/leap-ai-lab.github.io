@@ -1,0 +1,730 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* Header and Logo */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+.logo-img {
+    max-height: 150px;
+    width: auto;
+    display: block;
+}
+
+/* Navigation Bar */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-list a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+.nav-list a.active {
+    color: #2563eb;
+}
+
+.nav-list a.active::after {
+    width: 100%;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: calc(100vh - 200px);
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-container.wide-container {
+    max-width: 1200px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #64748b;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #475569;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #475569;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 15px 20px;
+    }
+
+    .logo-img {
+        max-height: 50px;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+
+    .nav-list {
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .nav-list a {
+        font-size: 15px;
+    }
+
+    .main-content {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 12px 15px;
+    }
+
+    .logo-img {
+        max-height: 45px;
+    }
+
+    .navbar {
+        padding: 8px 15px;
+        margin-top: 8px;
+        padding-top: 8px;
+    }
+
+    .nav-list {
+        gap: 20px;
+    }
+
+    .nav-list a {
+        font-size: 14px;
+    }
+
+    .main-content {
+        padding: 25px 12px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+}
+
+/* Utility Classes */
+.centered-body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 30px 0;
+}
+
+/* Page Description */
+.page-description {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* Filter Component */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    border: 2px solid #e0e0e0;
+    background-color: #ffffff;
+    color: #475569;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.filter-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    background-color: #eff6ff;
+}
+
+.filter-btn.active {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+/* Lesson Card */
+.lesson-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    opacity: 1;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.lesson-card:hover {
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+    border-color: #2563eb;
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+.lesson-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+    flex: 1;
+    line-height: 1.4;
+}
+
+.lesson-description {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.duration {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Tags */
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.technical-tag {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.socio-ethical-tag {
+    background-color: #fce7f3;
+    color: #9f1239;
+}
+
+.career-tag {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+/* Responsive adjustments for cards */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .filter-container {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .lesson-card {
+        padding: 20px;
+    }
+
+    .lesson-title {
+        font-size: 18px;
+    }
+
+    .page-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-container {
+        gap: 6px;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .lesson-card {
+        padding: 16px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tag {
+        margin-top: 8px;
+    }
+}
+
+/* Loading and Error States */
+.loading-indicator {
+    text-align: center;
+    padding: 40px 20px;
+    color: #64748b;
+}
+
+.loading-indicator p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.error-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #dc2626;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.error-message p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Lesson Page Styles */
+.back-link {
+    display: inline-block;
+    color: #2563eb;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.lesson-header {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.lesson-header h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 42px;
+}
+
+.lesson-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.meta-item {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.lesson-overview {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #475569;
+    margin-top: 20px;
+}
+
+.lesson-section {
+    margin-bottom: 50px;
+}
+
+.lesson-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #1e293b;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 10px;
+}
+
+.objectives-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.objectives-list li {
+    padding: 12px 0 12px 30px;
+    position: relative;
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.objectives-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.outline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.outline-section {
+    background-color: #f8fafc;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+    border-left: 4px solid #2563eb;
+}
+
+.outline-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.outline-section-header h3 {
+    font-size: 20px;
+    color: #1e293b;
+    margin: 0;
+}
+
+.outline-duration {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.outline-topics {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.outline-topics li {
+    padding: 8px 0 8px 20px;
+    position: relative;
+    color: #475569;
+    font-size: 15px;
+}
+
+.outline-topics li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.download-section {
+    background-color: #f8fafc;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid #2563eb;
+}
+
+.download-btn:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.download-btn-guide {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.download-btn-slides {
+    background-color: #059669;
+    border-color: #059669;
+}
+
+.download-btn-slides:hover {
+    background-color: #047857;
+    border-color: #047857;
+    box-shadow: 0 4px 8px rgba(5, 150, 105, 0.2);
+}
+
+.download-btn-worksheets {
+    background-color: #dc2626;
+    border-color: #dc2626;
+}
+
+.download-btn-worksheets:hover {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+    box-shadow: 0 4px 8px rgba(220, 38, 38, 0.2);
+}
+
+/* Responsive adjustments for lesson page */
+@media (max-width: 768px) {
+    .lesson-header h1 {
+        font-size: 32px;
+    }
+
+    .lesson-section h2 {
+        font-size: 26px;
+    }
+
+    .lesson-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .outline-section {
+        padding: 20px;
+    }
+
+    .download-section {
+        padding: 20px;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+    }
+
+    .download-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

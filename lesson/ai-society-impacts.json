@@ -1,0 +1,43 @@
+{
+  "id": 6,
+  "title": "AI in Society: Impacts and Challenges",
+  "slug": "ai-society-impacts",
+  "description": "Explore how AI technologies affect society, including job displacement, decision-making, and social dynamics.",
+  "category": "socio-ethical",
+  "duration": "2 hours",
+  "publicationDate": "2024-04-01",
+  "overview": "Examine the broader societal impacts of AI technologies, from economic effects to social and cultural changes. This lesson encourages critical thinking about AI's role in shaping our future.",
+  "learningObjectives": [
+    "Analyze economic impacts of AI automation",
+    "Understand AI's role in decision-making systems",
+    "Explore social and cultural implications",
+    "Develop informed perspectives on AI governance"
+  ],
+  "outline": [
+    {
+      "section": "Economic Impacts",
+      "duration": "30 minutes",
+      "topics": ["Job Displacement", "New Job Creation", "Economic Inequality"]
+    },
+    {
+      "section": "Decision-Making Systems",
+      "duration": "30 minutes",
+      "topics": ["Automated Decision Making", "Algorithmic Governance", "Human Oversight"]
+    },
+    {
+      "section": "Social Dynamics",
+      "duration": "30 minutes",
+      "topics": ["Social Media and AI", "Information Ecosystems", "Cultural Shifts"]
+    },
+    {
+      "section": "Future Considerations",
+      "duration": "30 minutes",
+      "topics": ["AI Governance", "Policy Development", "Stakeholder Engagement"]
+    }
+  ],
+  "downloads": {
+    "educatorGuide": "../static/downloads/society-impacts-educator-guide.pdf",
+    "slideDeck": "../static/downloads/society-impacts-slides.pdf",
+    "worksheets": "../static/downloads/society-impacts-worksheets.pdf"
+  }
+}

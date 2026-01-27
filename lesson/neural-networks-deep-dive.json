@@ -1,0 +1,43 @@
+{
+  "id": 2,
+  "title": "Neural Networks Deep Dive",
+  "slug": "neural-networks-deep-dive",
+  "description": "Explore the architecture and training of neural networks, from basic perceptrons to deep learning models.",
+  "category": "technical",
+  "duration": "3 hours",
+  "publicationDate": "2024-02-01",
+  "overview": "Dive deep into neural network architectures, understanding how they learn and process information. This lesson covers everything from single-layer perceptrons to complex deep learning models.",
+  "learningObjectives": [
+    "Understand neural network architecture and components",
+    "Learn about activation functions and their roles",
+    "Master backpropagation algorithm",
+    "Build and train deep neural networks"
+  ],
+  "outline": [
+    {
+      "section": "Neural Network Basics",
+      "duration": "30 minutes",
+      "topics": ["Perceptrons", "Multi-layer Networks", "Activation Functions"]
+    },
+    {
+      "section": "Training Neural Networks",
+      "duration": "60 minutes",
+      "topics": ["Backpropagation", "Gradient Descent", "Optimization Techniques"]
+    },
+    {
+      "section": "Deep Learning",
+      "duration": "60 minutes",
+      "topics": ["Convolutional Neural Networks", "Recurrent Neural Networks", "Transfer Learning"]
+    },
+    {
+      "section": "Practical Implementation",
+      "duration": "30 minutes",
+      "topics": ["Building Models", "Hyperparameter Tuning", "Best Practices"]
+    }
+  ],
+  "downloads": {
+    "educatorGuide": "../static/downloads/neural-nets-educator-guide.pdf",
+    "slideDeck": "../static/downloads/neural-nets-slides.pdf",
+    "worksheets": "../static/downloads/neural-nets-worksheets.pdf"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - LEAP</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <!-- <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="../static/logo.png" alt="LEAP Logo" class="logo-img">
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header> -->
+    <div id="header"></div>
+
+    <main class="main-content">
+        <div class="content-container">
+            <h1>Research</h1>
+            <p class="page-description">Our research focuses on understanding how humans interact with AI and robots in practice.</p>
+            
+            <h3>Research Areas</h3>
+            <p>Content coming soon...</p>
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+fetch("header.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("header").innerHTML = html;
+  });
+</script>

@@ -1,0 +1,381 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Introduction to Machine Learning",
+      "slug": "intro-machine-learning",
+      "description": "Learn the fundamentals of machine learning algorithms, including supervised and unsupervised learning techniques.",
+      "category": "technical",
+      "duration": "2 hours",
+      "publicationDate": "2024-01-15",
+      "overview": "This lesson provides a comprehensive introduction to machine learning, covering fundamental concepts, algorithms, and practical applications. Students will gain hands-on experience with supervised and unsupervised learning techniques.",
+      "learningObjectives": [
+        "Understand the basic concepts and terminology of machine learning",
+        "Differentiate between supervised and unsupervised learning",
+        "Implement basic machine learning algorithms",
+        "Evaluate model performance using appropriate metrics"
+      ],
+      "outline": [
+        {
+          "section": "Introduction",
+          "duration": "15 minutes",
+          "topics": ["What is Machine Learning?", "History and Evolution", "Real-world Applications"]
+        },
+        {
+          "section": "Supervised Learning",
+          "duration": "45 minutes",
+          "topics": ["Classification vs Regression", "Linear Models", "Decision Trees", "Model Evaluation"]
+        },
+        {
+          "section": "Unsupervised Learning",
+          "duration": "30 minutes",
+          "topics": ["Clustering", "Dimensionality Reduction", "Association Rules"]
+        },
+        {
+          "section": "Hands-on Practice",
+          "duration": "30 minutes",
+          "topics": ["Building Your First Model", "Data Preprocessing", "Model Training and Evaluation"]
+        }
+      ],
+      "downloads": {
+        "educatorGuide": "../static/downloads/intro-ml-educator-guide.pdf",
+        "slideDeck": "static/downloads/intro-ml-slides.pdf",
+        "worksheets": "../static/downloads/intro-ml-worksheets.pdf"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Neural Networks Deep Dive",
+      "slug": "neural-networks-deep-dive",
+      "description": "Explore the architecture and training of neural networks, from basic perceptrons to deep learning models.",
+      "category": "technical",
+      "duration": "3 hours",
+      "publicationDate": "2024-02-01",
+      "overview": "Dive deep into neural network architectures, understanding how they learn and process information. This lesson covers everything from single-layer perceptrons to complex deep learning models.",
+      "learningObjectives": [
+        "Understand neural network architecture and components",
+        "Learn about activation functions and their roles",
+        "Master backpropagation algorithm",
+        "Build and train deep neural networks"
+      ],
+      "outline": [
+        {
+          "section": "Neural Network Basics",
+          "duration": "30 minutes",
+          "topics": ["Perceptrons", "Multi-layer Networks", "Activation Functions"]
+        },
+        {
+          "section": "Training Neural Networks",
+          "duration": "60 minutes",
+          "topics": ["Backpropagation", "Gradient Descent", "Optimization Techniques"]
+        },
+        {
+          "section": "Deep Learning",
+          "duration": "60 minutes",
+          "topics": ["Convolutional Neural Networks", "Recurrent Neural Networks", "Transfer Learning"]
+        },
+        {
+          "section": "Practical Implementation",
+          "duration": "30 minutes",
+          "topics": ["Building Models", "Hyperparameter Tuning", "Best Practices"]
+        }
+      ],
+      "downloads": {
+        "educatorGuide": "../static/downloads/neural-nets-educator-guide.pdf",
+        "slideDeck": "static/downloads/neural-nets-slides.pdf",
+        "worksheets": "../static/downloads/neural-nets-worksheets.pdf"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Natural Language Processing Basics",
+      "slug": "nlp-basics",
+      "description": "Introduction to NLP concepts including tokenization, embeddings, and transformer models.",
+      "category": "technical",
+      "duration": "2.5 hours",
+      "publicationDate": "2024-02-15",
+      "overview": "Learn the fundamentals of natural language processing, from basic text preprocessing to advanced transformer models. This lesson covers practical NLP techniques used in modern AI applications.",
+      "learningObjectives": [
+        "Understand text preprocessing and tokenization",
+        "Learn about word embeddings and vector representations",
+        "Explore transformer architecture",
+        "Apply NLP techniques to real-world problems"
+      ],
+      "outline": [
+        {
+          "section": "Text Preprocessing",
+          "duration": "30 minutes",
+          "topics": ["Tokenization", "Stemming and Lemmatization", "Stop Words"]
+        },
+        {
+          "section": "Word Embeddings",
+          "duration": "45 minutes",
+          "topics": ["Word2Vec", "GloVe", "Contextual Embeddings"]
+        },
+        {
+          "section": "Transformer Models",
+          "duration": "45 minutes",
+          "topics": ["Attention Mechanism", "BERT", "GPT Architecture"]
+        },
+        {
+          "section": "NLP Applications",
+          "duration": "30 minutes",
+          "topics": ["Sentiment Analysis", "Text Classification", "Language Translation"]
+        }
+      ],
+      "downloads": {
+        "educatorGuide": "../static/downloads/nlp-educator-guide.pdf",
+        "slideDeck": "static/downloads/nlp-slides.pdf",
+        "worksheets": "../static/downloads/nlp-worksheets.pdf"
+      }
+    },
+    {
+      "id": 4,
+      "title": "AI Ethics and Bias",
+      "slug": "ai-ethics-bias",
+      "description": "Examine ethical considerations in AI development, including algorithmic bias, fairness, and accountability.",
+      "category": "socio-ethical",
+      "duration": "1.5 hours",
+      "publicationDate": "2024-03-01",
+      "overview": "Explore the ethical dimensions of artificial intelligence, focusing on bias, fairness, and responsible AI development. This lesson addresses critical questions about how AI systems should be designed and deployed.",
+      "learningObjectives": [
+        "Identify sources of bias in AI systems",
+        "Understand fairness metrics and evaluation methods",
+        "Learn about ethical frameworks for AI development",
+        "Develop strategies for building responsible AI systems"
+      ],
+      "outline": [
+        {
+          "section": "Understanding Bias in AI",
+          "duration": "30 minutes",
+          "topics": ["Types of Bias", "Sources of Bias", "Real-world Examples"]
+        },
+        {
+          "section": "Fairness and Equity",
+          "duration": "30 minutes",
+          "topics": ["Fairness Metrics", "Equity vs Equality", "Mitigation Strategies"]
+        },
+        {
+          "section": "Ethical Frameworks",
+          "duration": "30 minutes",
+          "topics": ["Ethical Principles", "Accountability", "Transparency"]
+        }
+      ],
+      "downloads": {
+        "educatorGuide": "../static/downloads/ethics-educator-guide.pdf",
+        "slideDeck": "static/downloads/ethics-slides.pdf",
+        "worksheets": "../static/downloads/ethics-worksheets.pdf"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Privacy and Data Protection",
+      "slug": "privacy-data-protection",
+      "description": "Understanding privacy concerns in AI systems and strategies for protecting user data.",
+      "category": "socio-ethical",
+      "duration": "1.5 hours",
+      "publicationDate": "2024-03-15",
+      "overview": "Learn about privacy challenges in AI systems and explore techniques for protecting sensitive data while maintaining model performance. This lesson covers legal, technical, and ethical aspects of data privacy.",
+      "learningObjectives": [
+        "Understand privacy risks in AI systems",
+        "Learn about differential privacy and federated learning",
+        "Explore data protection regulations",
+        "Implement privacy-preserving techniques"
+      ],
+      "outline": [
+        {
+          "section": "Privacy Fundamentals",
+          "duration": "30 minutes",
+          "topics": ["Data Collection Risks", "Data Inference Attacks", "Privacy Regulations"]
+        },
+        {
+          "section": "Privacy-Preserving Techniques",
+          "duration": "45 minutes",
+          "topics": ["Differential Privacy", "Federated Learning", "Homomorphic Encryption"]
+        },
+        {
+          "section": "Best Practices",
+          "duration": "15 minutes",
+          "topics": ["Data Minimization", "Access Controls", "Audit Trails"]
+        }
+      ],
+      "downloads": {
+        "educatorGuide": "../static/downloads/privacy-educator-guide.pdf",
+        "slideDeck": "static/downloads/privacy-slides.pdf",
+        "worksheets": "../static/downloads/privacy-worksheets.pdf"
+      }
+    },
+    {
+      "id": 6,
+      "title": "AI in Society: Impacts and Challenges",
+      "slug": "ai-society-impacts",
+      "description": "Explore how AI technologies affect society, including job displacement, decision-making, and social dynamics.",
+      "category": "socio-ethical",
+      "duration": "2 hours",
+      "publicationDate": "2024-04-01",
+      "overview": "Examine the broader societal impacts of AI technologies, from economic effects to social and cultural changes. This lesson encourages critical thinking about AI's role in shaping our future.",
+      "learningObjectives": [
+        "Analyze economic impacts of AI automation",
+        "Understand AI's role in decision-making systems",
+        "Explore social and cultural implications",
+        "Develop informed perspectives on AI governance"
+      ],
+      "outline": [
+        {
+          "section": "Economic Impacts",
+          "duration": "30 minutes",
+          "topics": ["Job Displacement", "New Job Creation", "Economic Inequality"]
+        },
+        {
+          "section": "Decision-Making Systems",
+          "duration": "30 minutes",
+          "topics": ["Automated Decision Making", "Algorithmic Governance", "Human Oversight"]
+        },
+        {
+          "section": "Social Dynamics",
+          "duration": "30 minutes",
+          "topics": ["Social Media and AI", "Information Ecosystems", "Cultural Shifts"]
+        },
+        {
+          "section": "Future Considerations",
+          "duration": "30 minutes",
+          "topics": ["AI Governance", "Policy Development", "Stakeholder Engagement"]
+        }
+      ],
+      "downloads": {
+        "educatorGuide": "../static/downloads/society-impacts-educator-guide.pdf",
+        "slideDeck": "static/downloads/society-impacts-slides.pdf",
+        "worksheets": "../static/downloads/society-impacts-worksheets.pdf"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Building Your AI Portfolio",
+      "slug": "building-ai-portfolio",
+      "description": "Learn how to showcase your AI projects effectively and build a compelling portfolio for job applications.",
+      "category": "career-development",
+      "duration": "1 hour",
+      "publicationDate": "2024-04-15",
+      "overview": "Master the art of creating an impressive AI portfolio that stands out to employers. This lesson covers project selection, documentation, presentation, and portfolio platforms.",
+      "learningObjectives": [
+        "Select and prioritize projects for your portfolio",
+        "Create compelling project documentation",
+        "Present technical work to non-technical audiences",
+        "Build and maintain an online portfolio"
+      ],
+      "outline": [
+        {
+          "section": "Portfolio Strategy",
+          "duration": "15 minutes",
+          "topics": ["Project Selection", "Target Audience", "Portfolio Goals"]
+        },
+        {
+          "section": "Documentation Best Practices",
+          "duration": "20 minutes",
+          "topics": ["README Files", "Code Comments", "Project Descriptions"]
+        },
+        {
+          "section": "Presentation Techniques",
+          "duration": "15 minutes",
+          "topics": ["Visualizations", "Demo Videos", "Case Studies"]
+        },
+        {
+          "section": "Portfolio Platforms",
+          "duration": "10 minutes",
+          "topics": ["GitHub", "Personal Websites", "LinkedIn"]
+        }
+      ],
+      "downloads": {
+        "educatorGuide": "../static/downloads/portfolio-educator-guide.pdf",
+        "slideDeck": "static/downloads/portfolio-slides.pdf",
+        "worksheets": "../static/downloads/portfolio-worksheets.pdf"
+      }
+    },
+    {
+      "id": 8,
+      "title": "AI Career Paths and Opportunities",
+      "slug": "ai-career-paths",
+      "description": "Discover various career paths in AI, from research to industry applications, and how to prepare for them.",
+      "category": "career-development",
+      "duration": "1.5 hours",
+      "publicationDate": "2024-05-01",
+      "overview": "Explore the diverse career opportunities in artificial intelligence, from research positions to industry roles. Learn about required skills, educational paths, and how to position yourself for success.",
+      "learningObjectives": [
+        "Identify different AI career paths",
+        "Understand required skills and qualifications",
+        "Learn about educational and training options",
+        "Develop a career action plan"
+      ],
+      "outline": [
+        {
+          "section": "AI Career Landscape",
+          "duration": "20 minutes",
+          "topics": ["Research vs Industry", "Job Roles and Titles", "Industry Sectors"]
+        },
+        {
+          "section": "Required Skills",
+          "duration": "30 minutes",
+          "topics": ["Technical Skills", "Soft Skills", "Domain Expertise"]
+        },
+        {
+          "section": "Educational Paths",
+          "duration": "20 minutes",
+          "topics": ["Degrees and Certifications", "Online Learning", "Bootcamps"]
+        },
+        {
+          "section": "Career Planning",
+          "duration": "20 minutes",
+          "topics": ["Building Experience", "Networking", "Job Search Strategies"]
+        }
+      ],
+      "downloads": {
+        "educatorGuide": "../static/downloads/career-paths-educator-guide.pdf",
+        "slideDeck": "static/downloads/career-paths-slides.pdf",
+        "worksheets": "../static/downloads/career-paths-worksheets.pdf"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Networking in the AI Community",
+      "slug": "networking-ai-community",
+      "description": "Strategies for connecting with professionals, attending conferences, and building relationships in the AI field.",
+      "category": "career-development",
+      "duration": "1 hour",
+      "publicationDate": "2024-05-15",
+      "overview": "Learn effective networking strategies specific to the AI community. This lesson covers online and offline networking, conference participation, and building meaningful professional relationships.",
+      "learningObjectives": [
+        "Develop effective networking strategies",
+        "Navigate AI conferences and events",
+        "Build and maintain professional relationships",
+        "Leverage social media for networking"
+      ],
+      "outline": [
+        {
+          "section": "Networking Fundamentals",
+          "duration": "15 minutes",
+          "topics": ["Why Network?", "Networking Mindset", "Building Authentic Connections"]
+        },
+        {
+          "section": "Conference Networking",
+          "duration": "20 minutes",
+          "topics": ["Pre-Conference Preparation", "During the Event", "Follow-up Strategies"]
+        },
+        {
+          "section": "Online Networking",
+          "duration": "15 minutes",
+          "topics": ["LinkedIn", "Twitter/X", "GitHub", "Online Communities"]
+        },
+        {
+          "section": "Maintaining Relationships",
+          "duration": "10 minutes",
+          "topics": ["Regular Communication", "Mutual Support", "Long-term Connections"]
+        }
+      ],
+      "downloads": {
+        "educatorGuide": "../static/downloads/networking-educator-guide.pdf",
+        "slideDeck": "static/downloads/networking-slides.pdf",
+        "worksheets": "../static/downloads/networking-worksheets.pdf"
+      }
+    }
+  ]
+}

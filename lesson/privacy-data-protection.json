@@ -1,0 +1,38 @@
+{
+  "id": 5,
+  "title": "Privacy and Data Protection",
+  "slug": "privacy-data-protection",
+  "description": "Understanding privacy concerns in AI systems and strategies for protecting user data.",
+  "category": "socio-ethical",
+  "duration": "1.5 hours",
+  "publicationDate": "2024-03-15",
+  "overview": "Learn about privacy challenges in AI systems and explore techniques for protecting sensitive data while maintaining model performance. This lesson covers legal, technical, and ethical aspects of data privacy.",
+  "learningObjectives": [
+    "Understand privacy risks in AI systems",
+    "Learn about differential privacy and federated learning",
+    "Explore data protection regulations",
+    "Implement privacy-preserving techniques"
+  ],
+  "outline": [
+    {
+      "section": "Privacy Fundamentals",
+      "duration": "30 minutes",
+      "topics": ["Data Collection Risks", "Data Inference Attacks", "Privacy Regulations"]
+    },
+    {
+      "section": "Privacy-Preserving Techniques",
+      "duration": "45 minutes",
+      "topics": ["Differential Privacy", "Federated Learning", "Homomorphic Encryption"]
+    },
+    {
+      "section": "Best Practices",
+      "duration": "15 minutes",
+      "topics": ["Data Minimization", "Access Controls", "Audit Trails"]
+    }
+  ],
+  "downloads": {
+    "educatorGuide": "../static/downloads/privacy-educator-guide.pdf",
+    "slideDeck": "../static/downloads/privacy-slides.pdf",
+    "worksheets": "../static/downloads/privacy-worksheets.pdf"
+  }
+}

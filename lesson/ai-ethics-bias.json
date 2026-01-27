@@ -1,0 +1,38 @@
+{
+  "id": 4,
+  "title": "AI Ethics and Bias",
+  "slug": "ai-ethics-bias",
+  "description": "Examine ethical considerations in AI development, including algorithmic bias, fairness, and accountability.",
+  "category": "socio-ethical",
+  "duration": "1.5 hours",
+  "publicationDate": "2024-03-01",
+  "overview": "Explore the ethical dimensions of artificial intelligence, focusing on bias, fairness, and responsible AI development. This lesson addresses critical questions about how AI systems should be designed and deployed.",
+  "learningObjectives": [
+    "Identify sources of bias in AI systems",
+    "Understand fairness metrics and evaluation methods",
+    "Learn about ethical frameworks for AI development",
+    "Develop strategies for building responsible AI systems"
+  ],
+  "outline": [
+    {
+      "section": "Understanding Bias in AI",
+      "duration": "30 minutes",
+      "topics": ["Types of Bias", "Sources of Bias", "Real-world Examples"]
+    },
+    {
+      "section": "Fairness and Equity",
+      "duration": "30 minutes",
+      "topics": ["Fairness Metrics", "Equity vs Equality", "Mitigation Strategies"]
+    },
+    {
+      "section": "Ethical Frameworks",
+      "duration": "30 minutes",
+      "topics": ["Ethical Principles", "Accountability", "Transparency"]
+    }
+  ],
+  "downloads": {
+    "educatorGuide": "../static/downloads/ethics-educator-guide.pdf",
+    "slideDeck": "../static/downloads/ethics-slides.pdf",
+    "worksheets": "../static/downloads/ethics-worksheets.pdf"
+  }
+}

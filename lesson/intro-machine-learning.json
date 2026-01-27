@@ -1,0 +1,43 @@
+{
+  "id": 1,
+  "title": "Introduction to Machine Learning",
+  "slug": "intro-machine-learning",
+  "description": "Learn the fundamentals of machine learning algorithms, including supervised and unsupervised learning techniques.",
+  "category": "technical",
+  "duration": "2 hours",
+  "publicationDate": "2024-01-15",
+  "overview": "This lesson provides a comprehensive introduction to machine learning, covering fundamental concepts, algorithms, and practical applications. Students will gain hands-on experience with supervised and unsupervised learning techniques.",
+  "learningObjectives": [
+    "Understand the basic concepts and terminology of machine learning",
+    "Differentiate between supervised and unsupervised learning",
+    "Implement basic machine learning algorithms",
+    "Evaluate model performance using appropriate metrics"
+  ],
+  "outline": [
+    {
+      "section": "Introduction",
+      "duration": "15 minutes",
+      "topics": ["What is Machine Learning?", "History and Evolution", "Real-world Applications"]
+    },
+    {
+      "section": "Supervised Learning",
+      "duration": "45 minutes",
+      "topics": ["Classification vs Regression", "Linear Models", "Decision Trees", "Model Evaluation"]
+    },
+    {
+      "section": "Unsupervised Learning",
+      "duration": "30 minutes",
+      "topics": ["Clustering", "Dimensionality Reduction", "Association Rules"]
+    },
+    {
+      "section": "Hands-on Practice",
+      "duration": "30 minutes",
+      "topics": ["Building Your First Model", "Data Preprocessing", "Model Training and Evaluation"]
+    }
+  ],
+  "downloads": {
+    "educatorGuide": "../static/downloads/intro-ml-educator-guide.pdf",
+    "slideDeck": "../static/downloads/intro-ml-slides.pdf",
+    "worksheets": "../static/downloads/intro-ml-worksheets.pdf"
+  }
+}
