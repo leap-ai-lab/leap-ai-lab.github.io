@@ -1,1 +1,30 @@
-<meta http-equiv="refresh" content="0; url=https://github.com/leap-ai-lab/leap-ai-lab.github.io/blob/main/html/index.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAP - Learning with and Engaging with AI in Practice</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <main class="main-content">
+        <div class="content-container">
+            <h1>LEAP</h1>
+            <h2>Learning with and Engaging with AI in Practice</h2>
+            
+            
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+fetch("header.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("header").innerHTML = html;
+  });
+</script>
