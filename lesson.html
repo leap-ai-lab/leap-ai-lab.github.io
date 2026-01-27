@@ -7,20 +7,6 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <!-- <header>
-        <div class="header-container">
-            <a href="index.html" class="logo-link">
-                <img src="../static/logo.png" alt="LEAP Logo" class="logo-img">
-            </a>
-        </div>
-        <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header> -->
     <div id="header"></div>
 
     <main class="main-content">
@@ -34,35 +20,36 @@
             </div>
 
             <article id="lessonContent" style="display: none;">
-                <!-- Lesson header section -->
+               <!-- Lesson header section -->
                 <div class="lesson-header">
-                    <a href="resources.html" class="back-link">← Back to Resources</a>
-                    <h1 id="lessonTitle"></h1>
-                    <div class="lesson-meta">
-                        <span id="publicationDate" class="meta-item"></span>
-                        <span id="lessonDuration" class="meta-item"></span>
-                        <span id="lessonCategory" class="meta-item tag"></span>
-                    </div>
-                    <p id="lessonOverview" class="lesson-overview"></p>
+                <a href="resources.html" class="back-link">← Back to Resources</a>
+                <h1 id="lessonTitle"></h1>
+                <div class="lesson-meta">
+                    <span id="publicationDate" class="meta-item"></span>
+                    <span id="lessonDuration" class="meta-item"></span>
+                    <span id="lessonCategory" class="meta-item tag"></span>
+                </div>
+                <p id="lessonOverview" class="lesson-overview"></p>
+
+                 <div class="download-buttons" id="downloadButtons"></div>
+
                 </div>
 
+                <!-- Grid: Objectives + Outline side-by-side -->
+                <section class="lesson-grid">
                 <!-- Key Learning Objectives -->
-                <section class="lesson-section">
+                <div class="lesson-panel">
                     <h2>Key Learning Objectives</h2>
                     <ul id="learningObjectives" class="objectives-list"></ul>
-                </section>
+                </div>
 
                 <!-- Lesson Outline -->
-                <section class="lesson-section">
+                <div class="lesson-panel">
                     <h2>Lesson Outline</h2>
                     <div id="lessonOutline" class="outline-container"></div>
+                </div>
                 </section>
 
-                <!-- Download Section -->
-                <section class="lesson-section download-section">
-                    <h2>Download Resources</h2>
-                    <div class="download-buttons" id="downloadButtons"></div>
-                </section>
             </article>
         </div>
     </main>
