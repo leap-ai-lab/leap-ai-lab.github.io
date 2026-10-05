@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — LEAP</title>
+  <meta name="description" content="LEAP events, workshops, and summits on AI literacy.">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <h1 class="page-title">Events</h1>
+        <p class="page-subtitle">Workshops, convenings, and public programs from the LEAP Initiative. All events are free unless otherwise noted.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="filter-bar" id="filter-bar">
+    <div class="container filter-bar-inner">
+      <span class="filter-label">Filter by:</span>
+      <div class="filter-tags" id="filter-tags" role="group" aria-label="Filter events by tag"></div>
+      <button class="filter-clear" id="filter-clear" aria-label="Clear all filters">Clear filters</button>
+    </div>
+  </div>
+
+  <main>
+    <div class="container cards-section">
+      <div class="cards-grid" id="cards-grid" role="list" aria-live="polite" aria-label="Events">
+        <!-- Skeleton cards rendered by JS on load -->
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Add event JSON filenames here
+    const EVENT_FILES = [
+      'ev-001.json'
+    ];
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const grid = document.getElementById('cards-grid');
+      showSkeletonCards(grid, EVENT_FILES.length || 3);
+
+      try {
+        const items = await loadItems('events', EVENT_FILES);
+        grid.innerHTML = '';
+
+        const allTags = collectAllTags(items);
+        initFilters('filter-bar', 'cards-grid', allTags, items);
+
+        items.forEach(item => {
+          // Enrich with date/location for card display
+          const enriched = {
+            ...item,
+            format: item.format,
+            duration: item.date ? formatDate(item.date) : '',
+            summary: item.summary
+          };
+          const card = renderCard(enriched, 'event-detail.html');
+          card.setAttribute('role', 'listitem');
+          grid.appendChild(card);
+        });
+
+        if (items.length === 0) {
+          showError(grid, 'No upcoming events. Check back soon.');
+        }
+      } catch (e) {
+        showError(grid, 'Could not load events. Please try refreshing.');
+      }
+    });
+  </script>
+</body>
+</html>

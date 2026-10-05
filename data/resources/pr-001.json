@@ -1,0 +1,88 @@
+{
+  "id": "pr-001",
+  "type": "parent-resource",
+  "title": "Talking to Your Teen About AI",
+  "subtitle": "A practical guide for parents navigating AI at home and at school",
+  "audience": ["parent", "caregiver"],
+  "gradeLevel": ["9-10", "11-12"],
+  "subject": ["Family Conversations", "Digital Literacy"],
+  "tags": ["conversation-guide", "teen", "home", "digital-safety"],
+  "duration": "15 min read",
+  "format": "Guide",
+  "thumbnail": null,
+  "summary": "Most parents didn't grow up with AI, and that's okay. This guide offers concrete conversation starters, plain-language explanations of how AI tools work, and practical questions to ask your child's school about AI policies.",
+  "body": [
+    {
+      "type": "section-heading",
+      "text": "You Don't Need to Be a Tech Expert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Your teenager is almost certainly using AI tools already — for homework help, creative projects, or just out of curiosity. You don't need to understand the technical details to have useful, grounded conversations about it. What matters most is that you ask questions and stay engaged."
+    },
+    {
+      "type": "section-heading",
+      "text": "What AI Tools Your Teen Is Likely Using"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Chatbots for writing assistance or research (ChatGPT, Claude, Gemini)",
+        "AI image generators for creative projects (Canva AI, Adobe Firefly, DALL·E)",
+        "AI-powered search tools that summarize results instead of listing links",
+        "AI tutoring or homework-help platforms",
+        "AI features built into apps they already use (Snapchat My AI, Instagram)"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "Conversation Starters"
+    },
+    {
+      "type": "paragraph",
+      "text": "These questions work better than lecturing. Pick one and see where the conversation goes:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "\"Have you used any AI tools for school lately? What did you use it for?\"",
+        "\"If an AI helped you write something, do you feel like you still learned from it?\"",
+        "\"Has an AI ever told you something that turned out to be wrong?\"",
+        "\"What do you think AI can't do well?\"",
+        "\"Does your school have rules about AI? Do you think those rules make sense?\""
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "Questions to Ask Your Child's School"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Does the school have an AI use policy? Where can I find it?",
+        "Are students being taught how to evaluate AI-generated content critically?",
+        "Are teachers receiving training on AI literacy?",
+        "What data privacy protections apply when students use AI tools?"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "One Thing to Know About How AI Works"
+    },
+    {
+      "type": "paragraph",
+      "text": "AI chatbots don't look things up the way a search engine does. They generate responses word by word based on patterns learned from vast amounts of text. This means they can produce confident-sounding answers that are entirely wrong. Teaching your teen to verify claims from AI tools — just as they would verify information from any source — is one of the most practical things you can do."
+    },
+    {
+      "type": "section-heading",
+      "text": "More Resources"
+    },
+    {
+      "type": "paragraph",
+      "text": "See our parent resource library for guides on AI and college applications, AI and creative work, and how to read your school's AI policy."
+    }
+  ],
+  "relatedIds": ["pr-002"],
+  "dateAdded": "2025-09-05",
+  "lastUpdated": "2025-09-05"
+}

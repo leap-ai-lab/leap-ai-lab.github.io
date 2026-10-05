@@ -1,0 +1,64 @@
+{
+  "id": "rs-001",
+  "type": "research",
+  "title": "What Do Students Believe About AI? A Multi-School Survey of Adolescent Mental Models",
+  "authors": ["M. Chen", "J. Rivera", "T. Okafor"],
+  "affiliation": "LEAP Initiative, University of Chicago",
+  "year": 2025,
+  "journal": "Journal of Educational Technology Research",
+  "doi": "#",
+  "tags": ["survey-research", "mental-models", "adolescents", "beliefs"],
+  "audience": ["researcher", "educator", "administrator"],
+  "summary": "A survey of 1,200 high school students across six schools found that most students significantly overestimate AI reliability while underestimating the influence of training data on outputs. We describe four distinct 'mental model clusters' and discuss implications for curriculum design.",
+  "body": [
+    {
+      "type": "section-heading",
+      "text": "Abstract"
+    },
+    {
+      "type": "paragraph",
+      "text": "As AI tools become embedded in daily academic and social life, understanding what students actually believe about how these systems work is a precondition for effective literacy education. We report findings from a multi-school survey of 1,200 high school students (grades 9–12) examining beliefs about AI accuracy, agency, and the relationship between training data and outputs."
+    },
+    {
+      "type": "section-heading",
+      "text": "Key Findings"
+    },
+    {
+      "type": "list",
+      "items": [
+        "68% of students reported trusting AI-generated factual claims 'most of the time' or 'always,' comparable to their trust in textbooks",
+        "Fewer than 20% could accurately explain what 'training data' is when asked in an open-response format",
+        "Students who had taken any formal CS coursework showed modestly better calibration about AI limitations, but not meaningfully different verification behaviors",
+        "We identified four mental model clusters: Skeptics, Deferential Users, Tool Framers, and Anthropomorphizers — each with distinct implications for instruction"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "Implications for Practice"
+    },
+    {
+      "type": "paragraph",
+      "text": "These findings suggest that AI literacy interventions should prioritize calibration — helping students develop accurate beliefs about both AI capabilities and limitations — rather than focusing primarily on technical explainability. The prevalence of anthropomorphic reasoning in the Anthropomorphizer cluster points to a specific instructional challenge that simple 'AI is just statistics' messaging does not resolve."
+    },
+    {
+      "type": "section-heading",
+      "text": "Methods Note"
+    },
+    {
+      "type": "paragraph",
+      "text": "Survey instrument, codebook, and anonymized data available to qualified researchers upon request. See the full paper for participant demographics, school context descriptions, and detailed cluster analysis."
+    },
+    {
+      "type": "download",
+      "label": "Full Paper (PDF)",
+      "url": "#"
+    },
+    {
+      "type": "download",
+      "label": "Survey Instrument",
+      "url": "#"
+    }
+  ],
+  "dateAdded": "2025-07-15",
+  "lastUpdated": "2025-07-15"
+}

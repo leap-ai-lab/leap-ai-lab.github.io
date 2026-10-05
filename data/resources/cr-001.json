@@ -1,0 +1,94 @@
+{
+  "id": "cr-001",
+  "type": "classroom-resource",
+  "title": "Unpacking Bias in AI Image Generators",
+  "subtitle": "A guided activity for exploring how training data shapes AI output",
+  "audience": ["high-school", "educator"],
+  "gradeLevel": ["9-10", "11-12"],
+  "subject": ["Computer Science", "Social Studies", "Media Literacy"],
+  "tags": ["bias", "image-generation", "critical-thinking", "discussion"],
+  "duration": "60–75 minutes",
+  "format": "Classroom Activity",
+  "thumbnail": null,
+  "summary": "Students use freely available image-generation tools to probe how AI systems reflect and amplify societal biases. Through structured prompting and group analysis, learners build vocabulary for discussing fairness and representation in automated systems.",
+  "body": [
+    {
+      "type": "section-heading",
+      "text": "Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "This activity asks students to become investigators rather than passive users of AI. By submitting carefully varied prompts to an image generator and documenting the results, they gather firsthand evidence of patterns in the training data and develop analytical language for critiquing those patterns."
+    },
+    {
+      "type": "section-heading",
+      "text": "Learning Objectives"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Explain in plain terms what training data is and why it matters",
+        "Identify at least two examples of demographic or cultural bias in AI-generated images",
+        "Articulate the difference between a tool's output and the values embedded in its design",
+        "Propose one concrete change that could make a training dataset more representative"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "Materials"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Student devices with browser access",
+        "Access to a free image-generation tool (e.g., Adobe Firefly, Canva AI)",
+        "Observation worksheet (printable PDF linked below)",
+        "Chart paper or shared digital doc for group synthesis"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "Procedure"
+    },
+    {
+      "type": "numbered-list",
+      "items": [
+        "Warm-up (10 min): Ask students to sketch what they imagine when they hear the word 'doctor.' Share sketches. Surface assumptions before introducing AI.",
+        "Introduce the tool (5 min): Brief demo of the image generator. Establish norms for responsible use.",
+        "Prompt investigation (25 min): Student pairs work through a structured prompt sequence: neutral → profession → demographic modifier. They record image descriptions on the observation worksheet.",
+        "Small-group analysis (15 min): Groups compare findings. What patterns emerge? What surprised them?",
+        "Whole-class debrief (15 min): Use the provided discussion protocol to build shared vocabulary and connect findings to course themes.",
+        "Exit ticket (5 min): 'Name one thing you noticed and one question you still have.'"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "Standards Alignment"
+    },
+    {
+      "type": "paragraph",
+      "text": "This activity aligns with CSTA K–12 CS Standards (3A-AP-16, 3A-IC-24, 3A-IC-25) and can be adapted to meet NGSS Science and Engineering Practices around data analysis and argumentation."
+    },
+    {
+      "type": "section-heading",
+      "text": "Educator Notes"
+    },
+    {
+      "type": "paragraph",
+      "text": "This topic can surface real feelings about identity and representation. Review the facilitation guide before running the discussion. Consider pre-reading student context if your class has had recent conversations about race, gender, or equity."
+    },
+    {
+      "type": "download",
+      "label": "Student Observation Worksheet",
+      "url": "#"
+    },
+    {
+      "type": "download",
+      "label": "Educator Facilitation Guide",
+      "url": "#"
+    }
+  ],
+  "relatedIds": ["cr-002", "et-001"],
+  "dateAdded": "2025-09-15",
+  "lastUpdated": "2025-09-15"
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educator Training — LEAP</title>
+  <meta name="description" content="Professional development workshops, facilitator guides, and training modules for K–12 and university educators.">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <h1 class="page-title">Educator Training</h1>
+        <p class="page-subtitle">Professional development workshops, facilitator guides, and training modules for K–12 teachers, instructional coaches, and university faculty.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="filter-bar" id="filter-bar">
+    <div class="container filter-bar-inner">
+      <span class="filter-label">Filter by:</span>
+      <div class="filter-tags" id="filter-tags" role="group" aria-label="Filter training resources by tag"></div>
+      <button class="filter-clear" id="filter-clear" aria-label="Clear all filters">Clear filters</button>
+    </div>
+  </div>
+
+  <main>
+    <div class="container cards-section">
+      <div class="cards-grid" id="cards-grid" role="list" aria-live="polite" aria-label="Educator training resources">
+        <!-- Skeleton cards rendered by JS on load -->
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Add educator training JSON filenames here
+    const TRAINING_FILES = [
+      'et-001.json'
+    ];
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const grid = document.getElementById('cards-grid');
+      showSkeletonCards(grid, TRAINING_FILES.length || 6);
+
+      try {
+        const items = await loadItems('resources', TRAINING_FILES);
+        grid.innerHTML = '';
+
+        const allTags = collectAllTags(items);
+        initFilters('filter-bar', 'cards-grid', allTags, items);
+
+        items.forEach(item => {
+          const card = renderCard(item, 'resource-detail.html');
+          card.setAttribute('role', 'listitem');
+          grid.appendChild(card);
+        });
+
+        if (items.length === 0) {
+          showError(grid, 'No training resources found. Check back soon.');
+        }
+      } catch (e) {
+        showError(grid, 'Could not load resources. Please try refreshing.');
+      }
+    });
+  </script>
+</body>
+</html>

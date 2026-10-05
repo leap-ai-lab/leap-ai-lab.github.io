@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event — LEAP</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <header class="page-header" id="detail-header">
+    <div class="container">
+      <div class="page-header-inner" id="detail-header-inner">
+        <div class="loading-spinner"><div class="spinner-ring"></div></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="detail-layout" id="detail-layout" style="display:none;">
+        <div class="detail-body" id="detail-body"></div>
+        <aside class="detail-sidebar" id="detail-sidebar"></aside>
+      </div>
+      <div id="detail-error" style="padding:2rem 0; display:none;">
+        <p style="color:var(--color-text-muted);">This event could not be loaded.</p>
+        <a href="news-events.html" class="btn btn-outline" style="margin-top:1rem;">All Events</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const params = new URLSearchParams(window.location.search);
+      const id     = params.get('id');
+      const layout = document.getElementById('detail-layout');
+      const errEl  = document.getElementById('detail-error');
+      const headerInner = document.getElementById('detail-header-inner');
+
+      if (!id) { showErr(); return; }
+
+      try {
+        const resp = await fetch(`${getSiteRoot()}data/events/${id}.json`);
+        if (!resp.ok) throw new Error();
+        const item = await resp.json();
+
+        document.title = `${item.title} — LEAP`;
+
+        headerInner.innerHTML = `
+          <a href="news-events.html" class="btn btn-ghost-light" style="margin-bottom:1.5rem; font-size:0.8125rem;">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 7H2M6.5 2.5 2 7l4.5 4.5"/>
+            </svg>
+            All Events
+          </a>
+          <h1 class="page-title">${escHtml(item.title)}</h1>
+          ${item.subtitle ? `<p class="page-subtitle">${escHtml(item.subtitle)}</p>` : ''}
+        `;
+
+        renderDetailBody(item.body || [], document.getElementById('detail-body'));
+
+        // Sidebar
+        const sidebar = document.getElementById('detail-sidebar');
+        const regSection = item.registrationUrl ? `
+          <div class="sidebar-card">
+            <p class="sidebar-card-title">Registration</p>
+            <a href="${escHtml(item.registrationUrl)}" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.5rem;">Register now</a>
+            ${item.cost ? `<p style="font-size:0.75rem;color:var(--color-text-muted);margin-top:0.5rem;">${escHtml(item.cost)}</p>` : ''}
+            ${item.registrationDeadline ? `<p style="font-size:0.75rem;color:var(--color-text-muted);">Deadline: ${escHtml(formatDate(item.registrationDeadline))}</p>` : ''}
+          </div>
+        ` : '';
+
+        sidebar.innerHTML = `
+          ${regSection}
+          <div class="sidebar-card">
+            <p class="sidebar-card-title">Event details</p>
+            <div class="sidebar-meta-row">
+              ${item.date ? `<div class="sidebar-meta-item"><span class="sidebar-meta-label">Date</span><span class="sidebar-meta-value">${escHtml(formatDate(item.date))}</span></div>` : ''}
+              ${item.time ? `<div class="sidebar-meta-item"><span class="sidebar-meta-label">Time</span><span class="sidebar-meta-value">${escHtml(item.time)}</span></div>` : ''}
+              ${item.format ? `<div class="sidebar-meta-item"><span class="sidebar-meta-label">Format</span><span class="sidebar-meta-value">${escHtml(item.format)}</span></div>` : ''}
+              ${item.location ? `<div class="sidebar-meta-item"><span class="sidebar-meta-label">Location</span><span class="sidebar-meta-value">${escHtml(item.location)}</span></div>` : ''}
+              ${item.locationDetail ? `<div class="sidebar-meta-item"><span class="sidebar-meta-label">Address</span><span class="sidebar-meta-value">${escHtml(item.locationDetail)}</span></div>` : ''}
+              ${item.cost ? `<div class="sidebar-meta-item"><span class="sidebar-meta-label">Cost</span><span class="sidebar-meta-value">${escHtml(item.cost)}</span></div>` : ''}
+            </div>
+          </div>
+        `;
+
+        layout.style.display = '';
+      } catch (e) {
+        showErr();
+      }
+
+      function showErr() {
+        headerInner.innerHTML = '<h1 class="page-title">Event not found</h1>';
+        errEl.style.display = '';
+      }
+    });
+  </script>
+</body>
+</html>

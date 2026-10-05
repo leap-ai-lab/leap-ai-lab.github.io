@@ -1,0 +1,79 @@
+{
+  "id": "et-001",
+  "type": "educator-training",
+  "title": "Teaching AI Literacy: A Foundations Workshop",
+  "subtitle": "A half-day professional development module for K–12 educators",
+  "audience": ["educator", "administrator"],
+  "gradeLevel": ["K-8", "9-10", "11-12"],
+  "subject": ["Professional Development", "Computer Science", "Cross-Curricular"],
+  "tags": ["professional-development", "workshop", "foundations", "curriculum-design"],
+  "duration": "3.5 hours",
+  "format": "Workshop",
+  "thumbnail": null,
+  "summary": "Designed for educators with no prior AI background. Participants leave with a working mental model of how AI systems work, a framework for evaluating AI literacy resources, and a draft plan for integrating one new AI literacy topic into an existing course.",
+  "body": [
+    {
+      "type": "section-heading",
+      "text": "Workshop Goals"
+    },
+    {
+      "type": "paragraph",
+      "text": "This professional development module meets educators where they are — curious but uncertain — and builds both conceptual understanding and pedagogical confidence. By the end of the session, participants will have taught one short AI concept to a peer and received structured feedback."
+    },
+    {
+      "type": "section-heading",
+      "text": "Agenda"
+    },
+    {
+      "type": "numbered-list",
+      "items": [
+        "Welcome and framing (15 min): Why AI literacy, why now, and what it is not.",
+        "How AI systems work — an honest overview (45 min): Interactive lecture covering machine learning basics, language models, and generative AI. No jargon, many analogies.",
+        "Break (15 min)",
+        "AI in your classroom: Opportunities and honest limits (40 min): Small group discussion using classroom scenario cards. What would you actually do on Monday?",
+        "Resource evaluation framework (30 min): Hands-on practice evaluating three AI literacy resources using a simple rubric. Builds critical judgment for independent curriculum research.",
+        "Micro-teach practice (45 min): Each participant selects one concept and teaches a five-minute version to a partner. Partner provides feedback using a structured protocol.",
+        "Planning and next steps (20 min): Participants draft a brief integration plan for their own course context."
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "Who Should Attend"
+    },
+    {
+      "type": "paragraph",
+      "text": "Any K–12 educator interested in bringing AI literacy into their teaching, regardless of technical background or subject area. This workshop is not a coding or programming session — it is about concepts, contexts, and classroom practice."
+    },
+    {
+      "type": "section-heading",
+      "text": "Facilitator Notes"
+    },
+    {
+      "type": "paragraph",
+      "text": "This workshop is designed to be run by a facilitator with strong pedagogical background and working familiarity with AI tools. A facilitator guide with speaker notes, discussion prompts, and common participant questions is available below. Estimated setup time: 30 minutes."
+    },
+    {
+      "type": "download",
+      "label": "Full Facilitator Guide",
+      "url": "#"
+    },
+    {
+      "type": "download",
+      "label": "Participant Workbook",
+      "url": "#"
+    },
+    {
+      "type": "download",
+      "label": "Classroom Scenario Cards (printable)",
+      "url": "#"
+    },
+    {
+      "type": "download",
+      "label": "Resource Evaluation Rubric",
+      "url": "#"
+    }
+  ],
+  "relatedIds": ["cr-001", "cr-002"],
+  "dateAdded": "2025-08-20",
+  "lastUpdated": "2025-09-10"
+}

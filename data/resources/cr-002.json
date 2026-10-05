@@ -1,0 +1,89 @@
+{
+  "id": "cr-002",
+  "type": "classroom-resource",
+  "title": "How Does a Language Model Actually Work?",
+  "subtitle": "A conceptual walkthrough for students with no prior CS background",
+  "audience": ["high-school", "educator"],
+  "gradeLevel": ["9-10", "11-12"],
+  "subject": ["Computer Science", "Mathematics", "English Language Arts"],
+  "tags": ["language-models", "explainability", "conceptual", "no-code"],
+  "duration": "45–50 minutes",
+  "format": "Lesson + Slides",
+  "thumbnail": null,
+  "summary": "A jargon-free lesson that builds a working mental model of large language models using analogy, word prediction games, and a visual walkthrough. No programming knowledge required. Suitable for any class exploring AI tools.",
+  "body": [
+    {
+      "type": "section-heading",
+      "text": "Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "Students are interacting with AI-powered tools daily but rarely understand what is actually happening under the hood. This lesson uses a scaffolded analogy — predicting the next word in a sentence — to build genuine intuition about how language models generate text, without requiring any background in statistics or programming."
+    },
+    {
+      "type": "section-heading",
+      "text": "Learning Objectives"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Describe what a language model does in one or two plain sentences",
+        "Explain why the same prompt can produce different outputs on different runs",
+        "Identify limitations of language models that follow from how they are trained",
+        "Distinguish between what a model 'knows' and what it 'predicts'"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "Materials"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Slide deck (linked below — editable Google Slides)",
+        "Index cards or sticky notes for the word-prediction warm-up",
+        "Optional: access to a chatbot for the live demo segment"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "Procedure"
+    },
+    {
+      "type": "numbered-list",
+      "items": [
+        "Word prediction warm-up (10 min): Students receive sentence fragments on index cards and write the most likely next word. Class shares and votes. Introduce the concept that this is, in simplified form, what a language model does — at scale, billions of times.",
+        "Core concept slides (20 min): Walk through the slide deck covering: tokens, probability distributions, temperature, and the difference between retrieval and generation.",
+        "Live demo — prompting for surprises (10 min): Use a chatbot to show how changing a single word in a prompt shifts the output. Students predict outputs before each reveal.",
+        "Limitations gallery walk (5 min): Four posters around the room, each naming one class of language model limitation (hallucination, stale knowledge, sycophancy, context length). Students add sticky-note examples.",
+        "Exit ticket (5 min): 'Finish this sentence: A language model doesn't understand text — instead it _____.'"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "Differentiation"
+    },
+    {
+      "type": "paragraph",
+      "text": "For advanced students: supplement with the optional reading on transformer architecture (linked below). For students who need more scaffolding: the slide deck includes an alternate 'simplified' version with fewer technical terms and more visual analogies."
+    },
+    {
+      "type": "download",
+      "label": "Slide Deck (Google Slides)",
+      "url": "#"
+    },
+    {
+      "type": "download",
+      "label": "Simplified Slide Deck",
+      "url": "#"
+    },
+    {
+      "type": "download",
+      "label": "Optional Reading: Transformer Architecture Explainer",
+      "url": "#"
+    }
+  ],
+  "relatedIds": ["cr-001"],
+  "dateAdded": "2025-10-01",
+  "lastUpdated": "2025-10-01"
+}

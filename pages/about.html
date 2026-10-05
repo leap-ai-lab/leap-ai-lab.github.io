@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — LEAP</title>
+  <meta name="description" content="The LEAP Initiative is an independent public resource for AI literacy education. Meet our team and learn about our research and philosophy.">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <h1 class="page-title">About LEAP</h1>
+        <p class="page-subtitle">An independent public resource for AI literacy, developed by researchers and educators committed to making AI understandable for everyone.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- Tabs -->
+      <div class="about-intro">
+        <div class="about-tabs" role="tablist" aria-label="About sections">
+          <button class="about-tab active" role="tab" aria-selected="true"  aria-controls="panel-team"       id="tab-team"       data-panel="panel-team">Our Team</button>
+          <button class="about-tab"        role="tab" aria-selected="false" aria-controls="panel-philosophy" id="tab-philosophy" data-panel="panel-philosophy">Philosophy</button>
+          <button class="about-tab"        role="tab" aria-selected="false" aria-controls="panel-research"   id="tab-research"   data-panel="panel-research">Research</button>
+        </div>
+      </div>
+
+      <!-- Team panel -->
+      <div class="about-panel active" id="panel-team" role="tabpanel" aria-labelledby="tab-team">
+        <p style="color:var(--color-text-mid);font-size:1rem;line-height:1.7;max-width:60ch;margin-bottom:var(--space-8);">
+          LEAP is built and maintained by a small team of researchers, educators, and designers. We work in partnership with schools, community organizations, and universities across the country.
+        </p>
+        <div class="team-grid" id="team-grid">
+          <div class="loading-spinner"><div class="spinner-ring"></div><span>Loading team…</span></div>
+        </div>
+      </div>
+
+      <!-- Philosophy panel -->
+      <div class="about-panel" id="panel-philosophy" role="tabpanel" aria-labelledby="tab-philosophy">
+        <div class="philosophy-content">
+
+          <div>
+            <h2 class="philosophy-item-title">AI literacy is for everyone, not just computer scientists.</h2>
+            <p class="philosophy-item-text">
+              The people most affected by AI systems — students, parents, workers, voters — are rarely given the tools to understand or question them. We design for the person who didn't grow up with this, who doesn't have a CS background, who just wants to know what's happening and what to do about it.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="philosophy-item-title">Honest about what AI can and cannot do.</h2>
+            <p class="philosophy-item-text">
+              We resist both uncritical enthusiasm and reflexive fear. Our materials explain how AI systems actually work, what their limitations are, and why those limitations matter — in plain language, with real examples, without the hype.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="philosophy-item-title">Built with educators, not just for them.</h2>
+            <p class="philosophy-item-text">
+              Every classroom resource is developed in partnership with practicing teachers and tested in real classrooms before it appears on this site. We revise based on what actually works, not what sounds good in a workshop.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="philosophy-item-title">Free, open, and attribution-only.</h2>
+            <p class="philosophy-item-text">
+              All LEAP materials are freely available and openly licensed. We don't charge schools or families, and we don't carry advertising. We ask only that you credit LEAP when you share or adapt our materials.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Research panel -->
+      <div class="about-panel" id="panel-research" role="tabpanel" aria-labelledby="tab-research">
+        <p style="color:var(--color-text-mid);font-size:1rem;line-height:1.7;max-width:60ch;margin-bottom:var(--space-8);">
+          LEAP conducts original research on how people understand and reason about AI. Our work informs our curriculum design and contributes to the broader field of AI literacy education.
+        </p>
+        <div class="research-list" id="research-list">
+          <div class="loading-spinner"><div class="spinner-ring"></div><span>Loading research…</span></div>
+        </div>
+        <div style="margin-top:var(--space-8);">
+          <a href="research.html" class="btn btn-outline">Browse all publications</a>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // ---- Tab switching ----
+    document.querySelectorAll('.about-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.about-tab').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.about-panel').forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        const panel = document.getElementById(tab.dataset.panel);
+        if (panel) panel.classList.add('active');
+      });
+    });
+
+    // Handle hash navigation
+    function activateTabByHash() {
+      const hash = window.location.hash.replace('#', '');
+      if (!hash) return;
+      const tab = document.querySelector(`[data-panel="panel-${hash}"]`);
+      if (tab) tab.click();
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Load team
+      const teamGrid = document.getElementById('team-grid');
+      try {
+        const resp = await fetch(`${getSiteRoot()}data/team/team.json`);
+        const data = await resp.json();
+        teamGrid.innerHTML = '';
+        data.team.forEach(member => {
+          const card = document.createElement('div');
+          card.className = 'team-card';
+          const initials = member.name.split(' ').map(n => n[0]).join('').slice(0, 2);
+          card.innerHTML = `
+            <div class="team-avatar" aria-hidden="true">${escHtml(initials)}</div>
+            <div>
+              <h3 class="team-name">${escHtml(member.name)}</h3>
+              <p class="team-title">${escHtml(member.title)}</p>
+              <p class="team-affiliation">${escHtml(member.affiliation)}</p>
+              <p class="team-bio">${escHtml(member.bio)}</p>
+            </div>
+          `;
+          teamGrid.appendChild(card);
+        });
+      } catch (e) {
+        showError(teamGrid, 'Could not load team information.');
+      }
+
+      // Load research for about page
+      const RESEARCH_FILES = ['rs-001.json'];
+      const researchList = document.getElementById('research-list');
+      try {
+        const items = await loadItems('research', RESEARCH_FILES);
+        researchList.innerHTML = '';
+        items.forEach(item => {
+          const el = document.createElement('a');
+          el.className = 'research-item';
+          el.href = `research-detail.html?id=${item.id}`;
+          const byline = item.authors ? item.authors.join(', ') : '';
+          el.innerHTML = `
+            <h3 class="research-item-title">${escHtml(item.title)}</h3>
+            <p class="research-item-meta">${escHtml(byline)}${item.year ? ` · ${item.year}` : ''}${item.journal ? ` · ${item.journal}` : ''}</p>
+            <p class="research-item-summary">${escHtml(item.summary)}</p>
+          `;
+          researchList.appendChild(el);
+        });
+      } catch (e) {
+        showError(researchList, 'Could not load research.');
+      }
+
+      activateTabByHash();
+    });
+  </script>
+</body>
+</html>

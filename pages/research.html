@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — LEAP</title>
+  <meta name="description" content="Peer-reviewed research, working papers, and data from the LEAP Initiative on AI literacy education.">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <h1 class="page-title">Research</h1>
+        <p class="page-subtitle">Peer-reviewed papers, working papers, and datasets from the LEAP lab. We study how people learn about AI, what they believe about it, and what works in AI literacy education.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="filter-bar" id="filter-bar">
+    <div class="container filter-bar-inner">
+      <span class="filter-label">Filter by:</span>
+      <div class="filter-tags" id="filter-tags" role="group" aria-label="Filter research by tag"></div>
+      <button class="filter-clear" id="filter-clear" aria-label="Clear all filters">Clear filters</button>
+    </div>
+  </div>
+
+  <main>
+    <div class="container cards-section">
+      <div class="cards-grid" id="cards-grid" role="list" aria-live="polite" aria-label="Research publications">
+        <!-- Skeleton cards rendered by JS on load -->
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Add research JSON filenames here
+    const RESEARCH_FILES = [
+      'rs-001.json'
+    ];
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const grid = document.getElementById('cards-grid');
+      showSkeletonCards(grid, RESEARCH_FILES.length || 3);
+
+      try {
+        const items = await loadItems('research', RESEARCH_FILES);
+        grid.innerHTML = '';
+
+        const allTags = collectAllTags(items);
+        initFilters('filter-bar', 'cards-grid', allTags, items);
+
+        items.forEach(item => {
+          const enriched = {
+            ...item,
+            format: item.journal || 'Publication',
+            duration: item.year ? String(item.year) : '',
+            subtitle: item.authors ? item.authors.join(', ') : ''
+          };
+          const card = renderCard(enriched, 'research-detail.html');
+          card.setAttribute('role', 'listitem');
+          grid.appendChild(card);
+        });
+
+        if (items.length === 0) {
+          showError(grid, 'No research found. Check back soon.');
+        }
+      } catch (e) {
+        showError(grid, 'Could not load research. Please try refreshing.');
+      }
+    });
+  </script>
+</body>
+</html>

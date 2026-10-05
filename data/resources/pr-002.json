@@ -1,0 +1,100 @@
+{
+  "id": "pr-002",
+  "type": "parent-resource",
+  "title": "AI Conversation Starters for Families",
+  "subtitle": "50 questions to open real conversations with your child about AI",
+  "audience": ["parent", "caregiver"],
+  "gradeLevel": ["6-8", "9-10", "11-12"],
+  "subject": ["Family Conversations", "Digital Literacy"],
+  "tags": ["discussion-starters", "conversation", "teen", "home"],
+  "duration": "5 min read",
+  "format": "Discussion Starters",
+  "thumbnail": null,
+  "summary": "A practical card deck of conversation starters organized by topic — from homework and creativity to privacy and jobs. No expertise required. Pick one at dinner and see where it goes.",
+  "body": [
+    {
+      "type": "section-heading",
+      "text": "How to Use These Questions"
+    },
+    {
+      "type": "paragraph",
+      "text": "You don't need a plan. Pick any question that feels relevant to your family right now and ask it over a meal, in the car, or whenever conversation naturally opens up. These are starting points — follow your child's lead from there. The goal is curiosity, not correction."
+    },
+    {
+      "type": "section-heading",
+      "text": "About AI and School"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Have you used an AI tool for a school assignment? What did you use it for?",
+        "If an AI helps you write a paper, do you feel like you still learned something?",
+        "Does your school have rules about AI? Do they seem fair to you?",
+        "Has a teacher talked to you about AI? What did they say?",
+        "Have you ever turned in something an AI wrote and felt weird about it?",
+        "If AI can answer most test questions, what do you think school is actually for?"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "About Trusting AI"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Has an AI ever told you something that turned out to be wrong? What happened?",
+        "Do you trust AI more or less than a search engine? Why?",
+        "When you get an answer from an AI, do you usually check it somewhere else?",
+        "What kinds of questions do you think AI is bad at answering?",
+        "If an AI sounds very confident, does that make you trust it more?"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "About Creativity and Identity"
+    },
+    {
+      "type": "list",
+      "items": [
+        "If you used AI to help make something — a song, a story, an image — is it still yours?",
+        "Is there anything creative you'd never want AI's help with? Why?",
+        "Have you seen AI-generated art or writing that surprised you — in a good or bad way?",
+        "Do you think AI-generated content should be labeled? Why or why not?"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "About the Future"
+    },
+    {
+      "type": "list",
+      "items": [
+        "What jobs do you think AI will change the most in your lifetime?",
+        "Is there anything you're learning now that you think AI will make unnecessary?",
+        "What skills do you think will matter more because of AI, not less?",
+        "If you could ask the people who build AI systems one question, what would it be?"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "About Fairness and Privacy"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Do you think AI treats everyone fairly? What makes you think that?",
+        "Have you ever felt like an app or website knew too much about you?",
+        "When you use a free AI tool, what do you think you're giving up in exchange?",
+        "Should AI be allowed to make decisions about things like college admissions or job applications?"
+      ]
+    },
+    {
+      "type": "download",
+      "label": "Printable Question Card Deck (PDF)",
+      "url": "#"
+    }
+  ],
+  "relatedIds": ["pr-001", "pr-003"],
+  "dateAdded": "2025-10-01",
+  "lastUpdated": "2025-10-01"
+}

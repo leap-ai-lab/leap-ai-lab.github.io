@@ -1,0 +1,52 @@
+{
+  "team": [
+    {
+      "id": "tm-001",
+      "name": "Dr. Maya Patel",
+      "title": "Director, LEAP Initiative",
+      "affiliation": "University of Chicago",
+      "bio": "Maya's research examines how adolescents develop epistemological frameworks for evaluating algorithmic information. Before joining UChicago, she spent eight years as a high school science teacher and curriculum developer.",
+      "photo": null,
+      "links": {
+        "email": "mailto:mpatel@uchicago.edu",
+        "website": "#"
+      }
+    },
+    {
+      "id": "tm-002",
+      "name": "Dr. James Okonkwo",
+      "title": "Research Scientist",
+      "affiliation": "University of Chicago",
+      "bio": "James studies human-AI interaction with a focus on how people calibrate trust in automated systems. His methodological background spans qualitative interview research and large-scale behavioral studies.",
+      "photo": null,
+      "links": {
+        "email": "mailto:jokonkwo@uchicago.edu",
+        "website": "#"
+      }
+    },
+    {
+      "id": "tm-003",
+      "name": "Sofia Reyes",
+      "title": "Curriculum Designer",
+      "affiliation": "LEAP Initiative",
+      "bio": "Sofia develops and tests classroom materials in partnership with Chicago-area schools. Her work integrates Universal Design for Learning principles to ensure activities are accessible across a range of learner needs.",
+      "photo": null,
+      "links": {
+        "email": "mailto:sreyes@uchicago.edu",
+        "website": null
+      }
+    },
+    {
+      "id": "tm-004",
+      "name": "Marcus Liu",
+      "title": "Outreach Coordinator",
+      "affiliation": "LEAP Initiative",
+      "bio": "Marcus manages LEAP's partnerships with school districts, community organizations, and university programs. He coordinates professional development workshops and the annual AI Literacy Summit.",
+      "photo": null,
+      "links": {
+        "email": "mailto:mliu@uchicago.edu",
+        "website": null
+      }
+    }
+  ]
+}

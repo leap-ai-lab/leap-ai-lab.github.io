@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Resources — LEAP</title>
+  <meta name="description" content="Plain-language guides, conversation starters, and school-advocacy tools for parents and families navigating AI.">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <h1 class="page-title">Resources for Parents &amp; Families</h1>
+        <p class="page-subtitle">No technical background needed. Find plain-language guides, conversation starters to use at home, and hands-on family activities — wherever you're starting from.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="filter-bar" id="filter-bar">
+    <div class="container filter-bar-inner">
+      <span class="filter-label">Filter by:</span>
+      <div class="filter-tags" id="filter-tags" role="group" aria-label="Filter parent resources by tag"></div>
+      <button class="filter-clear" id="filter-clear" aria-label="Clear all filters">Clear filters</button>
+    </div>
+  </div>
+
+  <main>
+    <div class="container cards-section">
+      <div class="cards-grid" id="cards-grid" role="list" aria-live="polite" aria-label="Parent resources">
+        <!-- Skeleton cards rendered by JS on load -->
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Add parent resource JSON filenames here.
+    // To add a new resource: create data/resources/pr-XXX.json and add the filename below.
+    const PARENT_FILES = [
+      'pr-001.json',
+      'pr-002.json',
+      'pr-003.json'
+    ];
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const grid = document.getElementById('cards-grid');
+      showSkeletonCards(grid, PARENT_FILES.length);
+
+      try {
+        const items = await loadItems('resources', PARENT_FILES);
+        grid.innerHTML = '';
+
+        const allTags = collectAllTags(items);
+        initFilters('filter-bar', 'cards-grid', allTags, items);
+
+        items.forEach(item => {
+          const card = renderCard(item, 'resource-detail.html');
+          card.setAttribute('role', 'listitem');
+          grid.appendChild(card);
+        });
+
+        if (items.length === 0) {
+          showError(grid, 'No resources found. Check back soon.');
+        }
+      } catch (e) {
+        showError(grid, 'Could not load resources. Please try refreshing.');
+      }
+    });
+  </script>
+</body>
+</html>

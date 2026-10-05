@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Demos — LEAP</title>
+  <meta name="description" content="Hands-on AI demos and interactive tools for students, educators, and the curious.">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <h1 class="page-title">Interactive Demos</h1>
+        <p class="page-subtitle">Hands-on tools and simulations for building intuition about how AI systems work — no installation required.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="filter-bar" id="filter-bar">
+    <div class="container filter-bar-inner">
+      <span class="filter-label">Filter by:</span>
+      <div class="filter-tags" id="filter-tags" role="group" aria-label="Filter demos by tag"></div>
+      <button class="filter-clear" id="filter-clear" aria-label="Clear all filters">Clear filters</button>
+    </div>
+  </div>
+
+  <main>
+    <div class="container cards-section">
+      <div class="cards-grid" id="cards-grid" role="list" aria-live="polite" aria-label="Interactive demos">
+        <div class="loading-spinner"><div class="spinner-ring"></div><span>Loading demos…</span></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Add demo JSON filenames here as they are created
+    // Demo JSON files live in data/resources/ with type "interactive-demo"
+    const DEMO_FILES = [
+      // e.g. 'demo-001.json'
+    ];
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const grid = document.getElementById('cards-grid');
+
+      if (DEMO_FILES.length === 0) {
+        grid.innerHTML = `
+          <div class="cards-empty">
+            <p class="cards-empty-title">Demos coming soon</p>
+            <p>We are building hands-on tools for exploring AI concepts. Check back shortly, or <a href="news-events.html">sign up for updates</a>.</p>
+          </div>`;
+        return;
+      }
+
+      try {
+        const items = await loadItems('resources', DEMO_FILES);
+        grid.innerHTML = '';
+        const allTags = collectAllTags(items);
+        initFilters('filter-bar', 'cards-grid', allTags, items);
+        items.forEach(item => {
+          const card = renderCard(item, 'resource-detail.html');
+          card.setAttribute('role', 'listitem');
+          grid.appendChild(card);
+        });
+      } catch (e) {
+        showError(grid, 'Could not load demos. Please try refreshing.');
+      }
+    });
+  </script>
+</body>
+</html>

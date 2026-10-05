@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved — LEAP</title>
+  <meta name="description" content="Partner with LEAP, request a workshop, share feedback, or join our mailing list.">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <h1 class="page-title">Get Involved</h1>
+        <p class="page-subtitle">Partner with us, request a professional development workshop, share feedback on our materials, or just say hello.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="padding-top:var(--space-10);padding-bottom:var(--space-16);">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:start;max-width:900px;">
+
+        <div>
+          <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);color:var(--color-navy);margin-bottom:var(--space-4);">Ways to work with LEAP</h2>
+
+          <div style="display:flex;flex-direction:column;gap:var(--space-5);">
+            <div>
+              <h3 style="font-size:var(--text-lg);font-weight:600;color:var(--color-navy);margin-bottom:var(--space-2);">Request a workshop</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-mid);line-height:1.65;">We offer professional development sessions for schools, districts, and university departments. Sessions can be adapted to your context and audience.</p>
+            </div>
+            <div>
+              <h3 style="font-size:var(--text-lg);font-weight:600;color:var(--color-navy);margin-bottom:var(--space-2);">Partner with us</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-mid);line-height:1.65;">We work with schools and community organizations to develop and pilot new curriculum. If you are interested in co-developing materials, reach out.</p>
+            </div>
+            <div>
+              <h3 style="font-size:var(--text-lg);font-weight:600;color:var(--color-navy);margin-bottom:var(--space-2);">Share feedback</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-mid);line-height:1.65;">We revise our materials based on how they work in practice. If you've used something from LEAP and want to tell us what happened, we want to hear it.</p>
+            </div>
+            <div>
+              <h3 style="font-size:var(--text-lg);font-weight:600;color:var(--color-navy);margin-bottom:var(--space-2);">Stay updated</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-mid);line-height:1.65;">We send occasional updates when new materials are released and events are announced. No more than once a month.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="sidebar-card" style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--card-radius);padding:var(--space-6);">
+            <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);color:var(--color-navy);margin-bottom:var(--space-5);">Contact us</h2>
+
+            <!-- Simple contact form — replace action with your form endpoint or mailto -->
+            <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+
+              <div>
+                <label for="cf-name" style="display:block;font-size:var(--text-sm);font-weight:500;color:var(--color-text);margin-bottom:var(--space-1);">Your name</label>
+                <input id="cf-name" type="text" placeholder="Full name"
+                  style="width:100%;padding:var(--space-3) var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-md);font-family:var(--font-body);font-size:var(--text-sm);color:var(--color-text);background:var(--color-bg);outline:none;"
+                  onfocus="this.style.borderColor='var(--color-accent)'" onblur="this.style.borderColor='var(--color-border)'">
+              </div>
+
+              <div>
+                <label for="cf-email" style="display:block;font-size:var(--text-sm);font-weight:500;color:var(--color-text);margin-bottom:var(--space-1);">Email address</label>
+                <input id="cf-email" type="email" placeholder="you@example.com"
+                  style="width:100%;padding:var(--space-3) var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-md);font-family:var(--font-body);font-size:var(--text-sm);color:var(--color-text);background:var(--color-bg);outline:none;"
+                  onfocus="this.style.borderColor='var(--color-accent)'" onblur="this.style.borderColor='var(--color-border)'">
+              </div>
+
+              <div>
+                <label for="cf-role" style="display:block;font-size:var(--text-sm);font-weight:500;color:var(--color-text);margin-bottom:var(--space-1);">I am a…</label>
+                <select id="cf-role"
+                  style="width:100%;padding:var(--space-3) var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-md);font-family:var(--font-body);font-size:var(--text-sm);color:var(--color-text);background:var(--color-bg);outline:none;appearance:none;"
+                  onfocus="this.style.borderColor='var(--color-accent)'" onblur="this.style.borderColor='var(--color-border)'">
+                  <option value="">Select your role</option>
+                  <option>K–12 teacher</option>
+                  <option>University educator</option>
+                  <option>School administrator</option>
+                  <option>Parent or caregiver</option>
+                  <option>Researcher</option>
+                  <option>Student</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="cf-message" style="display:block;font-size:var(--text-sm);font-weight:500;color:var(--color-text);margin-bottom:var(--space-1);">Message</label>
+                <textarea id="cf-message" rows="4" placeholder="What are you reaching out about?"
+                  style="width:100%;padding:var(--space-3) var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius-md);font-family:var(--font-body);font-size:var(--text-sm);color:var(--color-text);background:var(--color-bg);outline:none;resize:vertical;"
+                  onfocus="this.style.borderColor='var(--color-accent)'" onblur="this.style.borderColor='var(--color-border)'"></textarea>
+              </div>
+
+              <button onclick="handleSubmit()" class="btn btn-primary" style="width:100%;justify-content:center;padding:var(--space-3);">Send message</button>
+              <p id="cf-status" style="font-size:var(--text-sm);color:var(--color-text-muted);display:none;text-align:center;"></p>
+            </div>
+          </div>
+
+          <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-4);text-align:center;">
+            Or email us directly at <a href="mailto:leap@uchicago.edu">leap@uchicago.edu</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function handleSubmit() {
+      const name    = document.getElementById('cf-name').value.trim();
+      const email   = document.getElementById('cf-email').value.trim();
+      const message = document.getElementById('cf-message').value.trim();
+      const status  = document.getElementById('cf-status');
+
+      if (!name || !email || !message) {
+        status.textContent = 'Please fill in your name, email, and message.';
+        status.style.color = 'var(--color-text-mid)';
+        status.style.display = 'block';
+        return;
+      }
+
+      // In production: replace this with your form backend (Formspree, Netlify Forms, etc.)
+      status.textContent = 'Thank you — we will be in touch soon.';
+      status.style.color = 'var(--color-accent)';
+      status.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resource — LEAP</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <!-- Page header — populated by JS -->
+  <header class="page-header" id="detail-header">
+    <div class="container">
+      <div class="page-header-inner" id="detail-header-inner">
+        <div class="loading-spinner"><div class="spinner-ring"></div></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="detail-layout" id="detail-layout" style="display:none;">
+
+        <!-- Body content -->
+        <div class="detail-body" id="detail-body"></div>
+
+        <!-- Sidebar -->
+        <aside class="detail-sidebar" id="detail-sidebar"></aside>
+
+      </div>
+      <div id="detail-error" style="padding:2rem 0; display:none;">
+        <p style="color:var(--color-text-muted);">This resource could not be loaded. It may have moved or been removed.</p>
+        <a href="javascript:history.back()" class="btn btn-outline" style="margin-top:1rem;">Go back</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Map type values to back-link pages
+    const TYPE_BACK_LINKS = {
+      'classroom-resource':  { label: 'Classroom Resources', href: 'classroom-resources.html' },
+      'educator-training':   { label: 'Educator Training',   href: 'educator-training.html'   },
+      'parent-resource':     { label: 'Parent Resources',    href: 'parent-resources.html'    },
+      'interactive-demo':    { label: 'Interactive Demos',   href: 'interactive-demos.html'   },
+    };
+
+    function folderForType(type) {
+      return 'resources';
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const params  = new URLSearchParams(window.location.search);
+      const id      = params.get('id');
+      const layout  = document.getElementById('detail-layout');
+      const errEl   = document.getElementById('detail-error');
+      const headerInner = document.getElementById('detail-header-inner');
+
+      if (!id) { showDetailError(); return; }
+
+      try {
+        const folder = 'resources'; // all resource types live here
+        const resp   = await fetch(`${getSiteRoot()}data/${folder}/${id}.json`);
+        if (!resp.ok) throw new Error('Not found');
+        const item   = await resp.json();
+
+        // Update <title> and meta
+        document.title = `${item.title} — LEAP`;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.content = item.summary || '';
+
+        // Render header
+        const backInfo = TYPE_BACK_LINKS[item.type] || { label: 'Resources', href: 'classroom-resources.html' };
+        headerInner.innerHTML = `
+          <a href="${backInfo.href}" class="btn btn-ghost-light" style="margin-bottom:1.5rem; font-size:0.8125rem;">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 7H2M6.5 2.5 2 7l4.5 4.5"/>
+            </svg>
+            ${escHtml(backInfo.label)}
+          </a>
+          <h1 class="page-title">${escHtml(item.title)}</h1>
+          ${item.subtitle ? `<p class="page-subtitle">${escHtml(item.subtitle)}</p>` : ''}
+        `;
+
+        // Render body
+        const bodyEl = document.getElementById('detail-body');
+        renderDetailBody(item.body || [], bodyEl);
+
+        // Render sidebar
+        const sidebar = document.getElementById('detail-sidebar');
+        sidebar.innerHTML = buildSidebar(item);
+
+        layout.style.display = '';
+
+      } catch (e) {
+        showDetailError();
+      }
+
+      function showDetailError() {
+        headerInner.innerHTML = '<h1 class="page-title">Resource not found</h1>';
+        errEl.style.display = '';
+      }
+    });
+
+    function buildSidebar(item) {
+      const metaRows = [
+        item.format    && { label: 'Format',         value: item.format },
+        item.duration  && { label: 'Duration',        value: item.duration },
+        item.gradeLevel && item.gradeLevel.length && { label: 'Grade Level', value: item.gradeLevel.join(', ') },
+        item.subject   && item.subject.length && { label: 'Subject',        value: item.subject.join(', ') },
+        item.authors   && item.authors.length && { label: 'Authors',        value: item.authors.join(', ') },
+        item.year      && { label: 'Year',            value: item.year },
+        item.journal   && { label: 'Journal',         value: item.journal },
+        item.lastUpdated && { label: 'Last updated',  value: formatDate(item.lastUpdated) },
+      ].filter(Boolean);
+
+      const metaHtml = metaRows.map(r => `
+        <div class="sidebar-meta-item">
+          <span class="sidebar-meta-label">${escHtml(r.label)}</span>
+          <span class="sidebar-meta-value">${escHtml(String(r.value))}</span>
+        </div>
+      `).join('');
+
+      const tagsHtml = (item.tags || []).map(t =>
+        `<span class="card-tag">${escHtml(formatTag(t))}</span>`
+      ).join('');
+
+      return `
+        <div class="sidebar-card">
+          <p class="sidebar-card-title">About this resource</p>
+          <div class="sidebar-meta-row">${metaHtml}</div>
+          ${tagsHtml ? `
+            <p class="sidebar-card-title" style="margin-top:0.75rem;">Topics</p>
+            <div class="sidebar-tags">${tagsHtml}</div>
+          ` : ''}
+        </div>
+        ${item.audience && item.audience.length ? `
+          <div class="sidebar-card">
+            <p class="sidebar-card-title">Intended for</p>
+            <div class="sidebar-tags">
+              ${item.audience.map(a => `<span class="card-tag">${escHtml(formatTag(a))}</span>`).join('')}
+            </div>
+          </div>
+        ` : ''}
+      `;
+    }
+  </script>
+</body>
+</html>

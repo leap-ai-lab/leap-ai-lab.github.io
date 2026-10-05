@@ -1,30 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="./">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEAP - Learning with and Engaging with AI in Practice</title>
-    <link rel="stylesheet" href="../style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEAP — AI Literacy for Everyone</title>
+  <meta name="description" content="Free AI literacy resources, research, and materials for educators, parents, and students. From the LEAP Initiative.">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-    <div id="header"></div>
+  <div id="nav-placeholder"></div>
 
-    <main class="main-content">
-        <div class="content-container">
-            <h1>LEAP</h1>
-            <h2>Learning with and Engaging with AI in Practice</h2>
-            
-            
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-headline">
+            Understanding AI<br><em>starts here</em>
+          </h1>
+          <p class="hero-body">
+            LEAP is a free, open resource for everyone navigating AI in schools, homes, and communities. Find lesson plans, research, training workshops, and plain-language guides — wherever you're starting from.
+          </p>
+          <div class="hero-ctas">
+            <p class="hero-cta-label">I am looking for resources for:</p>
+            <div class="audience-ctas">
+              <a href="pages/classroom-resources.html" class="btn btn-audience">My classroom</a>
+              <a href="pages/parent-resources.html" class="btn btn-audience">My family</a>
+              <a href="pages/educator-training.html" class="btn btn-audience">My school or district</a>
+              <a href="pages/research.html" class="btn btn-audience">Research</a>
+            </div>
+          </div>
         </div>
-    </main>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-stat-card">
+            <div class="hero-stat-number">68%</div>
+            <div class="hero-stat-desc">of students trust AI-generated facts as much as textbooks — and most can't explain what training data is.</div>
+          </div>
+          <div class="hero-stat-card">
+            <div class="hero-stat-number">Free</div>
+            <div class="hero-stat-desc">All LEAP materials are openly licensed and free to use, adapt, and share with attribution.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AUDIENCE QUICKLINKS ===== -->
+  <section class="audience-section">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="section-heading">Find what you need</h2>
+      </div>
+      <div class="audience-cards">
+
+        <a href="pages/classroom-resources.html" class="audience-card">
+          <div class="audience-card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="3" width="16" height="12" rx="1.5"/>
+              <path d="M7 17h6M10 15v2"/>
+            </svg>
+          </div>
+          <h3 class="audience-card-title">Educators</h3>
+          <p class="audience-card-desc">Lesson plans, activities, and professional development designed for high school and university classrooms.</p>
+          <div class="audience-card-links">
+            <span class="audience-card-link">Classroom Resources</span>
+            <span class="audience-card-link">Educator Training</span>
+          </div>
+        </a>
+
+        <a href="pages/parent-resources.html" class="audience-card">
+          <div class="audience-card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="10" cy="6" r="3"/>
+              <path d="M4 17c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+            </svg>
+          </div>
+          <h3 class="audience-card-title">Parents &amp; Families</h3>
+          <p class="audience-card-desc">Plain-language guides to help you support your teenager, ask the right questions, and understand what AI tools are doing.</p>
+          <div class="audience-card-links">
+            <span class="audience-card-link">Parent Resources</span>
+          </div>
+        </a>
+
+        <a href="pages/research.html" class="audience-card">
+          <div class="audience-card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h12M4 8h8M4 12h10M4 16h6"/>
+            </svg>
+          </div>
+          <h3 class="audience-card-title">Researchers</h3>
+          <p class="audience-card-desc">Peer-reviewed studies, working papers, and data from the LEAP lab on how people learn about and with AI.</p>
+          <div class="audience-card-links">
+            <span class="audience-card-link">Research &amp; Publications</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED RESOURCES ===== -->
+  <section class="featured-section">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="section-heading">Recently added resources</h2>
+        <a href="pages/classroom-resources.html" class="section-link">Browse all resources</a>
+      </div>
+      <div class="featured-row" id="featured-resources">
+        <!-- Skeleton cards rendered by JS on load -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWS & EVENTS ===== -->
+  <section class="featured-section">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="section-heading">Upcoming events</h2>
+        <a href="pages/news-events.html" class="section-link">All events</a>
+      </div>
+      <div id="featured-events">
+        <!-- Populated by JS on load -->
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Load featured resources (mix of types)
+      const resourceFiles = ['cr-001.json', 'cr-002.json', 'et-001.json'];
+      const resourceGrid = document.getElementById('featured-resources');
+      showSkeletonCards(resourceGrid, 3);
+      try {
+        const items = await loadItems('resources', resourceFiles);
+        resourceGrid.innerHTML = '';
+        items.slice(0, 3).forEach(item => {
+          resourceGrid.appendChild(renderCard(item, 'pages/resource-detail.html'));
+        });
+      } catch (e) {
+        showError(resourceGrid, 'Could not load resources.');
+      }
+
+      // Load events
+      const eventFiles = ['ev-001.json'];
+      const eventContainer = document.getElementById('featured-events');
+      try {
+        const events = await loadItems('events', eventFiles);
+        eventContainer.innerHTML = '';
+        events.forEach(ev => {
+          eventContainer.appendChild(renderNewsCard(ev, 'pages/event-detail.html'));
+        });
+      } catch (e) {
+        showError(eventContainer, 'Could not load events.');
+      }
+    });
+  </script>
 </body>
 </html>
-
-<script>
-fetch("header.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("header").innerHTML = html;
-  });
-</script>

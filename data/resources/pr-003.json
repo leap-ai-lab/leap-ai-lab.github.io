@@ -1,0 +1,103 @@
+{
+  "id": "pr-003",
+  "type": "parent-resource",
+  "title": "Three AI Activities You Can Do With Your Family Tonight",
+  "subtitle": "Hands-on explorations that don't require any tech background",
+  "audience": ["parent", "caregiver"],
+  "gradeLevel": ["6-8", "9-10", "11-12"],
+  "subject": ["Family Conversations", "Digital Literacy", "Media Literacy"],
+  "tags": ["family-activities", "hands-on", "home", "teen", "no-code"],
+  "duration": "20–45 min per activity",
+  "format": "Family Activities",
+  "thumbnail": null,
+  "summary": "Three short activities designed for families to do together — no prior knowledge needed. Each one builds real intuition about how AI works and opens conversation naturally, without feeling like homework.",
+  "body": [
+    {
+      "type": "section-heading",
+      "text": "Why Do This Together?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The best way to understand AI is to use it with a purpose. These activities give your family something concrete to look at and discuss together. They're designed so that you and your child are on equal footing — neither of you needs to be the expert."
+    },
+    {
+      "type": "section-heading",
+      "text": "Activity 1: The Same Question, Three Ways (20 min)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pick a question your family genuinely wants to know the answer to — something local and specific works best, like 'What's a good hiking trail near us?' or 'How does our city's water get treated?' Then find the answer three ways: a regular web search, an AI chatbot, and by asking someone who actually knows (a neighbor, a teacher, a quick call). Compare what you got."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Did any of the three sources contradict each other?",
+        "Which answer felt most trustworthy, and why?",
+        "Did the AI answer sound confident even where it was vague or wrong?",
+        "Which source would you use again for this kind of question?"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This activity builds the habit of verification without making it feel like a lesson. It also surfaces something important: AI often sounds equally confident whether it's right or wrong."
+    },
+    {
+      "type": "section-heading",
+      "text": "Activity 2: Predict the Picture (30 min)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Before anyone opens a device: each person sketches or describes what they imagine when they hear a word — try 'teacher,' 'scientist,' 'programmer,' or 'nurse.' Then use a free AI image generator (Adobe Firefly and Canva AI are both free and appropriate for families) to generate images for those same words. Compare."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Does the AI's image look like what you pictured?",
+        "Who is in the AI's image? What are they wearing? Where are they?",
+        "If the AI showed mostly one type of person, why do you think that is?",
+        "Does this change how you think about AI-generated images you've seen before?"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This activity introduces the concept of training data bias in a way that feels immediate and personal rather than abstract. Most families find the comparison genuinely surprising."
+    },
+    {
+      "type": "section-heading",
+      "text": "Activity 3: Rewrite the Recipe (45 min)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Find a recipe your family likes and ask an AI chatbot to rewrite it — in a different style, for a different dietary restriction, or 'for a five-year-old who hates vegetables.' Then actually try to cook one version. This is less about AI and more about noticing: where did the AI do well? Where did it miss something a person would have caught?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Did the AI make any substitutions that seemed wrong or odd?",
+        "Did it miss anything about your family's actual kitchen — equipment, ingredients you have?",
+        "Would you use an AI for recipe help again? For what kind of question?",
+        "What would a person — a relative who cooks well, a chef — have done differently?"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Cooking grounds the conversation in something tangible. It also naturally raises the question of what 'context' an AI is missing, which is one of its core limitations."
+    },
+    {
+      "type": "section-heading",
+      "text": "After Any of These"
+    },
+    {
+      "type": "paragraph",
+      "text": "There's no right answer to any of the discussion questions above. The point is that your family is building a shared vocabulary for talking about AI — which is more useful than any single fact you could learn about it."
+    },
+    {
+      "type": "download",
+      "label": "Activity Guide with Printable Worksheets (PDF)",
+      "url": "#"
+    }
+  ],
+  "relatedIds": ["pr-001", "pr-002"],
+  "dateAdded": "2025-10-01",
+  "lastUpdated": "2025-10-01"
+}

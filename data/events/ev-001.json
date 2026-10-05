@@ -1,0 +1,62 @@
+{
+  "id": "ev-001",
+  "type": "event",
+  "title": "AI Literacy Summit: Classrooms, Campuses, and Communities",
+  "subtitle": "A one-day convening for educators, researchers, and policymakers",
+  "date": "2026-03-14",
+  "time": "9:00 AM – 5:00 PM CT",
+  "location": "University of Chicago, Crerar Library",
+  "locationDetail": "5730 S. Ellis Ave, Chicago, IL 60637",
+  "format": "In-Person",
+  "tags": ["summit", "educators", "policy", "research", "in-person"],
+  "audience": ["educator", "researcher", "administrator", "policymaker"],
+  "registrationUrl": "#",
+  "registrationDeadline": "2026-03-01",
+  "cost": "Free",
+  "summary": "A cross-sector gathering to share research, classroom practice, and policy thinking on AI literacy education. Keynotes, working sessions, and structured networking.",
+  "body": [
+    {
+      "type": "section-heading",
+      "text": "About the Summit"
+    },
+    {
+      "type": "paragraph",
+      "text": "The LEAP AI Literacy Summit brings together educators, researchers, school administrators, and policymakers for a full day of structured exchange. The goal is not to reach consensus, but to map the landscape honestly: what is working in classrooms, what is still unsettled in the research, and what institutional and policy conditions make AI literacy education possible at scale."
+    },
+    {
+      "type": "section-heading",
+      "text": "Agenda at a Glance"
+    },
+    {
+      "type": "numbered-list",
+      "items": [
+        "9:00 AM — Welcome and framing",
+        "9:30 AM — Keynote: The state of AI literacy education",
+        "10:45 AM — Parallel working sessions (choose one): Classroom Practice / Research Priorities / Policy and Equity",
+        "12:30 PM — Lunch and informal networking",
+        "1:30 PM — Keynote: What students actually need from AI literacy education",
+        "2:45 PM — Cross-sector small groups: What would it take to scale this?",
+        "4:15 PM — Synthesis and commitments",
+        "5:00 PM — Reception"
+      ]
+    },
+    {
+      "type": "section-heading",
+      "text": "Who Should Attend"
+    },
+    {
+      "type": "paragraph",
+      "text": "K–12 and higher education faculty, curriculum designers, school and district administrators, education researchers, and anyone working at the intersection of AI and learning. Space is limited to 150 participants to keep sessions substantive."
+    },
+    {
+      "type": "section-heading",
+      "text": "Registration"
+    },
+    {
+      "type": "paragraph",
+      "text": "Registration is free and required. A limited number of travel stipends are available for educators traveling from outside the Chicago region. Note travel stipend availability on the registration form."
+    }
+  ],
+  "dateAdded": "2025-11-01",
+  "lastUpdated": "2025-11-01"
+}
