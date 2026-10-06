@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>
+        AI Detective Lab
+    </title>
+    <link href="ai-detective-style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="app">
+    <div class="topbar">
+        <div class="brand">
+     <span aria-hidden="true" class="detective-icon">
+      🕵️
+     </span>
+            <span>
+      AI Detective Lab
+     </span>
+        </div>
+    </div>
+    <section class="panel" id="spinScreen">
+        <div class="hero">
+            <h1>
+                Spin, Compare & Spot the Difference
+            </h1>
+            <p>
+                Spin the wheel to get a mystery prompt. Then compare the outputs of two AI models at different stages of development.
+            </p>
+        </div>
+        <div class="wheel-wrap">
+            <div class="wheel-stage">
+                <div class="pointer">
+                </div>
+                <div class="wheel" id="wheel">
+                </div>
+                <button class="spin-btn" id="spinBtn">
+                    SPIN!
+                </button>
+            </div>
+        </div>
+    </section>
+    <div aria-labelledby="popupPrompt" aria-modal="true" class="prompt-modal hidden" id="promptModal" role="dialog">
+        <div class="prompt-pop">
+            <button aria-label="Close prompt" class="close-pop" id="closePrompt">
+                ×
+            </button>
+            <div class="eyebrow" id="popupLabel">
+                Prompt A
+            </div>
+            <h2 id="popupPrompt">
+            </h2>
+            <button class="primary" id="compareBtn">
+                Compare Models →
+            </button>
+        </div>
+    </div>
+    <section class="panel hidden" id="compareScreen">
+        <div class="compare-head">
+            <div>
+                <h1>
+                    Compare GPT-2 and ChatGPT
+                </h1>
+                <div class="lesson">
+                    <ul>
+                        <li>How does each model answer the prompt?</li>
+                        <li>What does each model seem able to do?</li>
+                        <li>What differences do you notice in the way they communicate?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="prompt-card">
+            <b id="promptType">
+                Current event prompt
+            </b>
+            <div class="prompt-text" id="promptText">
+            </div>
+        </div>
+        <div class="generation-label" id="currentGeneration">
+            Generation 1
+        </div>
+        <div class="models">
+            <article class="model-card fresh" id="card1">
+                <div class="model-title">
+       <span>
+        <span class="dot">
+        </span>
+        GPT-2
+       </span>
+                    <span>
+        📝
+       </span>
+                </div>
+                <div class="model-body" id="out1">
+                </div>
+            </article>
+            <article class="model-card fresh" id="card2">
+                <div class="model-title">
+       <span>
+        <span class="dot">
+        </span>
+        ChatGPT
+       </span>
+                    <span>
+        💬
+       </span>
+                </div>
+                <div class="model-body" id="out2">
+                </div>
+            </article>
+        </div>
+        <div class="regen-wrap">
+            <button class="primary" id="regenBtn">
+                ⟳ Generate another example
+            </button>
+        </div>
+        <div class="detective">
+            <label for="notes">
+                📝 What differences do you notice?
+            </label>
+            <!-- <textarea id="notes" placeholder="I notice how model A is... and how model B is..."></textarea> -->
+        </div>
+        <div class="history hidden" id="history">
+        </div>
+        <div class="actions">
+            <div>
+            </div>
+            <div class="right-actions">
+                <button class="secondary" id="respinBtn">
+                    ↻ Respin the wheel
+                </button>
+            </div>
+        </div>
+    </section>
+</div>
+<script defer="" src="script.js">
+</script>
+</body>
+</html>
